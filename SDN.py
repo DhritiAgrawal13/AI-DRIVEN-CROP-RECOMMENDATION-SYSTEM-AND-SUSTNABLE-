@@ -47,7 +47,7 @@ if not os.path.exists(MODEL_PATH):
 # # Streamlit cache to load model
 # @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model(MODEL_PATH)
+    model = tf.keras.models.load_model(MODEL_PATH, compile=False)
     return model
 
 model = load_model()
