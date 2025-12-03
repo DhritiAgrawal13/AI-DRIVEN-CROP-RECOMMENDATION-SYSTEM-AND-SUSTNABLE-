@@ -36,18 +36,19 @@ st.title("🌱 Crop Disease Prediction (Predefined Model)")
 
 # model = load_model()
 # st.success("Model loaded successfully!")
-FILE_ID = "1Kf2P3N5djVM0e4wxM8Ls2OrwOF57mDL_" 
-MODEL_PATH = "my_model.tflite"  # local filename
+FILE_ID = "1dG-e7UB0O4MjyKXg-hWFz2XpfeOppI0g"
+# url = f"https://drive.google.com/uc?id={FILE_ID}"
+MODEL_PATH = "my_model.h5"  # local filename
 
 # Download the model if it does not exist
 if not os.path.exists(MODEL_PATH):
-   url = f"https://drive.google.com/uc?id={FILE_ID}"
-   gdown.download(url, MODEL_PATH, quiet=False)
+    url = f"https://drive.google.com/uc?id={FILE_ID}"
+gdown.download(url, MODEL_PATH, quiet=False)
 
 # # Streamlit cache to load model
 # @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model(MODEL_PATH, compile=False)
+    model = tf.keras.models.load_model(MODEL_PATH)
     return model
 
 model = load_model()
