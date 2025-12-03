@@ -6,10 +6,11 @@ import json
 from google import genai
 import os 
 import gdown
-
+from dotenv import load_dotenv as env 
+env()
 
 # os.environ["GOOGLE_API_KEY"]  = "AIzaSyDfkkMquLJv_BZXlqyYkAHfkRloR6-y1mw"
-a=st.secrets('GeminiAPi')
+a=os.getenv('GeminiAPi')
 client = genai.Client(api_key=a)
 
 
