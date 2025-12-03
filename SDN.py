@@ -8,6 +8,7 @@ import os
 import gdown
 from dotenv import load_dotenv as env 
 env()
+
 pip install tensorflow
 # os.environ["GOOGLE_API_KEY"]  = "AIzaSyDfkkMquLJv_BZXlqyYkAHfkRloR6-y1mw"
 a=os.getenv('GeminiAPi')
@@ -16,26 +17,7 @@ client = genai.Client(api_key=a)
 
 st.title("🌱 Crop Disease Prediction (Predefined Model)")
 
-# ------------------- Load Predefined Model -------------------
-# # Replace the path below with your local model path
-# MODEL_PATH = r"https://drive.google.com/file/d/1Kf2P3N5djVM0e4wxM8Ls2OrwOF57mDL_/view?usp=sharing"
 
-# @st.cache_resource
-# def load_model():
-#     model = tf.keras.models.load_model(MODEL_PATH)
-#     return model
-
-# model = load_model()
-# st.success("Model loaded successfully!")
-# MODEL_PATH = r"/Users/ayushagrawal/Desktop/dhriti/crop_disease_manual_model.h5"
-
-# @st.cache_resource
-# def load_model():
-#     model = tf.keras.models.load_model(MODEL_PATH)
-#     return model
-
-# model = load_model()
-# st.success("Model loaded successfully!")
 FILE_ID = "1JHLYJ1XVyN6j5Ktx1Iz-mYYQjCyM_Erk"
 MODEL_PATH = "crop_disease_manual_model.h5"  # local filename
 
