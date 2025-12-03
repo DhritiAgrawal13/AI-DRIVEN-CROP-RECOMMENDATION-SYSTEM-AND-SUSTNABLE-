@@ -37,7 +37,7 @@ st.title("🌱 Crop Disease Prediction (Predefined Model)")
 # model = load_model()
 # st.success("Model loaded successfully!")
 FILE_ID = "1Kf2P3N5djVM0e4wxM8Ls2OrwOF57mDL_" 
-MODEL_PATH = "my_model.h5"  # local filename
+MODEL_PATH = "my_model.tflite"  # local filename
 
 # Download the model if it does not exist
 if not os.path.exists(MODEL_PATH):
