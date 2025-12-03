@@ -8,7 +8,7 @@ import os
 import gdown
 from dotenv import load_dotenv as env 
 env()
-
+pip install tensorflow
 # os.environ["GOOGLE_API_KEY"]  = "AIzaSyDfkkMquLJv_BZXlqyYkAHfkRloR6-y1mw"
 a=os.getenv('GeminiAPi')
 client = genai.Client(api_key=a)
